@@ -73,3 +73,5 @@ class ClassComponentWithState extends Component {
 export default ClassComponentWithState;
 ```
 Our code is slightly cleaner, and doesn't require as many keystrokes as the older version. Fewer keystrokes are always a plus in my book! This new syntax is what is often referred to as 'syntactic sugar': under the hood, the React library translates this back into the old constructor code that we first started with, so that the JavaScript remains valid to the JavaScript interpreter. The clue to this is the fact that when we want to access some data from the state object, we still need to call it with `this.state.someData`; changing it to just `state.someData` does not work. 
+
+While being able to write our code in this way is nice and convenient, going forward, I'm going to stick with the 'older' style of writing my React components by explicitly defining constructors so that you'll all have a better idea of what's going on under the hood. In other words, it's more "pedagogically sound". If you prefer the newer style (and I would in my own code), feel free to write your React components that way. 

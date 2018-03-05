@@ -1,11 +1,8 @@
 # Parent and Child Components
 
-Now let's get into talking about how to have components interact with each other. A single isolated component isn't going to do us much good. That being said,
-it's _possible_ to simply throw all of the HTML for a page into a single React component, though at that point that one component would be so bloated and 
-monolithic that you might as well not have used React at all. 
+Now let's get into talking about how to have components interact with each other. A single isolated component isn't going to do us much good. That being said, it's _possible_ to simply throw all of the HTML for a page into a single React component, though at that point that one component would be so bloated and monolithic that you might as well not have used React at all. 
 
-The beauty of React lies in the fact that it allows us to compose modular components together. Let's start off with the component we just saw, but let's change
-its name to `ParentComponent`.
+The beauty of React lies in the fact that it allows us to compose modular components together. Let's start off with the component we just saw, but let's change its name to `ParentComponent`.
 
 ```
 import React, { Component } from 'react';
@@ -50,7 +47,7 @@ class ParentComponent extends Component {
 export default ParentComponent;
 ```
 
-The only two other differences in this component are that we're importing a ChildComponent and then using it inside our `this.state.ingredients.map` call. ChildComponent is another React component. Notice that we're using it just as if it were any other HTML tag. This is how we lay out our component hierarchy: the ChildComponent is rendered within the ParentComponent. We can see this to be the case if we open up the developer console and inspect these elements. 
+The only two other differences in this component are that we're importing a `ChildComponent` and then using it inside our `this.state.ingredients.map` call. `ChildComponent` is another React component. Notice that we're using it just as if it were any other HTML tag. This is how we lay out our component hierarchy: the ChildComponent is rendered within the ParentComponent. We can see this to be the case if we open up the developer console and inspect these elements. 
 
 Note also that we're passing each ingredient as a 'thing' to the ChildComponent component. This is how a parent component passes data to a child component. It doesn't need to be called 'thing'; you can call it whatever you want. Conceptually though, every piece of data that a parent component passes down to a child component is called a 'prop' in React lingo. 
 
